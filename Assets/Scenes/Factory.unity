@@ -198,7 +198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756914177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -236,6 +236,8 @@ MonoBehaviour:
   touchController: {fileID: 1165683144}
   spaceShipPrefab: {fileID: 5949721301151660029, guid: 0608a88d2476f2746ae7317d61b56bde,
     type: 3}
+  safeFieldPrefab: {fileID: 3766330346063563304, guid: 42db30648a46cb044b89f2ed599e0b6e,
+    type: 3}
 --- !u!4 &1101610960
 Transform:
   m_ObjectHideFlags: 0
@@ -244,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101610958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.023528874, y: -2.2731903, z: -3.750167}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -4,26 +4,32 @@ using UnityEngine;
 
 public class SpaceShip : MonoBehaviour
 {
-    [SerializeField]
-    Status status;
+    public Status status;
 
     [SerializeField]
     List<Launcher> launchers = new List<Launcher>();
 
+    [SerializeField]
+    GameObject spaceShipObject;
+
+    float traceSpeed = 0.3f;
+
     public void TargetToMove(Vector3 position)
     {
-        transform.position = position;
+        transform.position = Vector2.MoveTowards(transform.position, position, traceSpeed);
     }
 
     public void ActiveObject(Vector3 position)
     {
+        status.isActivate = true;
         transform.position = position;
-        gameObject.SetActive(true);
+        spaceShipObject.SetActive(true);
     }
 
     public void HideObject()
     {
-        gameObject.SetActive(false);
+        status.isActivate = false;
+        spaceShipObject.SetActive(false);
     }
 
     void TakeAbility(Launcher launcher)
@@ -42,6 +48,9 @@ public class SpaceShip : MonoBehaviour
 
     void Update()
     {
+        if (!status.isActivate)
+            return;
+
         foreach (var launcher in launchers)
         {
             if (launcher.readyToFire)
