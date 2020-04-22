@@ -10,9 +10,11 @@ public class SpaceShip : MonoBehaviour
     [SerializeField]
     List<Launcher> launchers = new List<Launcher>();
 
+    float traceSpeed = 0.3f;
+
     public void TargetToMove(Vector3 position)
     {
-        transform.position = position;
+        transform.position = Vector2.MoveTowards(transform.position, position, traceSpeed);
     }
 
     public void ActiveObject(Vector3 position)
