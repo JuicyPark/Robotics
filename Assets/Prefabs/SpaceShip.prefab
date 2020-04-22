@@ -58,8 +58,8 @@ GameObject:
   - component: {fileID: 6297011491909039261}
   - component: {fileID: 5949721301151660029}
   - component: {fileID: 4719023461998103907}
-  - component: {fileID: 3660990125766360865}
-  - component: {fileID: 4501876693777620245}
+  - component: {fileID: 3321084805750012598}
+  - component: {fileID: 2292668809915660720}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -95,8 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e9940be07651043af155e5feef938c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: {fileID: 0}
+  status: {fileID: 4719023461998103907}
   launchers: []
+  spaceShipObject: {fileID: 8040687892177982123}
 --- !u!114 &4719023461998103907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,28 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f93be599fa245a47b29de8aef9d82e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &3660990125766360865
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4656121613303053235}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &4501876693777620245
+  isActivate: 0
+--- !u!61 &3321084805750012598
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,6 +137,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &2292668809915660720
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656121613303053235}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8040687892177982123
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +169,7 @@ GameObject:
   - component: {fileID: 1726818842271421545}
   - component: {fileID: 6402291053884786864}
   m_Layer: 0
-  m_Name: SpaceShipRenderer
+  m_Name: SpaceShipObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
