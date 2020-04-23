@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8127517698804043404}
-  - component: {fileID: 1290508586764597301}
+  - component: {fileID: 3515096254070601628}
   m_Layer: 0
   m_Name: LauncherBullet
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 6297011491909039261}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1290508586764597301
+--- !u!114 &3515096254070601628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,13 +40,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1774085573614053518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c92bb9f8d766f8c44b1539e5d799d9c2, type: 3}
+  m_Script: {fileID: 11500000, guid: a01e3448ebd8584489baf07de007351a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   readyToFire: 0
   weaponPrefab: {fileID: 202939933666153589, guid: 2918942e4afbb5b42bcf019d060b7114,
     type: 3}
-  delayTime: 0.2
+  weaponAmount: 10
+  delayTime: 0.3
 --- !u!1 &2832691410563407015
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3961010114454092311}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ff9670f77aa16246a20d69f55c3a243, type: 3}
   m_Name: 
