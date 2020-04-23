@@ -3,7 +3,7 @@
 public abstract class Launcher : MonoBehaviour
 {
     public bool readyToFire;
-    protected WeaponFactory weaponFactory;
+    protected Factory weaponFactory;
 
     [SerializeField]
     protected Weapon weaponPrefab;

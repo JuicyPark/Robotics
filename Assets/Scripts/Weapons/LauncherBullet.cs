@@ -5,6 +5,6 @@ public class LauncherBullet : Launcher
 {
     protected override void CreateWeaponFactory()
     {
-        weaponFactory = new WeaponFactory(weaponPrefab, 10);
+        weaponFactory = new Factory(weaponPrefab, 10);
     }
 }

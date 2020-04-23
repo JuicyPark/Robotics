@@ -2,14 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class WeaponFactory
+public class Factory
 {
     Weapon weapon;
     int weaponAmount;
 
     List<Weapon> weapons = new List<Weapon>();
 
-    public WeaponFactory(Weapon weapon, int weaponAmount)
+    public Factory(Weapon weapon, int weaponAmount)
     {
         this.weapon = weapon;
         this.weaponAmount = weaponAmount;
