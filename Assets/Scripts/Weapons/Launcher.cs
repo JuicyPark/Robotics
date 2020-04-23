@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
 
-public abstract class Launcher : MonoBehaviour
+public class Launcher : MonoBehaviour
 {
     public bool readyToFire;
-    protected WeaponFactory weaponFactory;
+    protected Factory weaponFactory;
 
     [SerializeField]
     protected Weapon weaponPrefab;
+    [SerializeField]
+    protected int weaponAmount = 10;
 
     [SerializeField]
     protected float delayTime = 0.3f;
     protected float elapsedTime;
-    protected abstract void CreateWeaponFactory();
 
     public virtual void FireWeapon()
     {
@@ -19,6 +20,10 @@ public abstract class Launcher : MonoBehaviour
         Weapon weapon = weaponFactory.Get();
         weapon.Activate(transform.position);
         weapon.Destroyed += OnWeaponDestroyed;
+    }
+    protected virtual void CreateWeaponFactory()
+    {
+        weaponFactory = new Factory(weaponPrefab, weaponAmount);
     }
 
     void OnWeaponDestroyed(Weapon weapon)
